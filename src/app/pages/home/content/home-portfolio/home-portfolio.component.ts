@@ -11,7 +11,7 @@ export class HomePortfolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.title = 'If you really must see my work...';
+    this.title = 'You\'re probably looking for this...';
   }
 
 }

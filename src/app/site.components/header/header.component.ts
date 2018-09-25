@@ -4,7 +4,7 @@ declare interface IHeaderLink {
   label: string;
   url?: string;
   home?: boolean;
-  action?: void;
+  action?: boolean;
 }
 
 @Component({
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
       {
         label: 'search',
         url: 'search',
-        action: this.search(),
+        action: true,
       },
       {
         label: 'portfolio',
@@ -51,7 +51,13 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
-  public search = (): void => {
-    console.info('search');
+  public action = (label: string): void => {
+    switch(label) {
+      case 'search':
+        console.info('search');
+        break;
+      default:
+        console.warn('no action specified!');
+    }
   }
 }

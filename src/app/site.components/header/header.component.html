@@ -1,7 +1,14 @@
 <header>
   <ul class="headerLinks">
     <li *ngFor="let link of headerLinks | reverseOrder" [ngClass]="{'home-link' : link.home}">
-      <a mat-button [ngx-scroll-to]="link.url">{{link.label}}</a>
+      <a *ngIf="link.home" mat-button routerLink="{{link.url}}">{{link.label}}</a>
+      <a *ngIf="link.action" mat-button (click)="action(link.label)">{{link.label}}</a>
+      <a *ngIf="!link.home && !link.action"mat-button
+         [ngx-scroll-to]="link.url"
+         [ngx-scroll-to-duration]="400"
+         [ngx-scroll-to-offset]="-50">
+        {{link.label}}
+      </a>
     </li>
   </ul>
 </header>
