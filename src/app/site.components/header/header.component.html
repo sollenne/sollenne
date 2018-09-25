@@ -1,14 +1,45 @@
+<!-- header spacer here to give scroll destination && spacer for sticky header -->
+<div id="header-spacer"></div>
+
+<!-- main header -->
 <header>
   <ul class="headerLinks">
     <li *ngFor="let link of headerLinks | reverseOrder" [ngClass]="{'home-link' : link.home}">
-      <a *ngIf="link.home" mat-button routerLink="{{link.url}}">{{link.label}}</a>
-      <a *ngIf="link.action" mat-button (click)="action(link.label)">{{link.label}}</a>
-      <a *ngIf="!link.home && !link.action"mat-button
-         [ngx-scroll-to]="link.url"
-         [ngx-scroll-to-duration]="400"
-         [ngx-scroll-to-offset]="-50">
+
+      <!-- home link -->
+      <a mat-button
+         *ngIf="link.home"
+         [ngx-scroll-to]="'header-spacer'"
+         routerLink="{{link.url}}">
         {{link.label}}
       </a>
+
+      <!-- actions -->
+      <a mat-button
+         *ngIf="link.action"
+         (click)="action(link.label)">
+        {{link.label}}
+      </a>
+
+      <!-- nav links scroll to section on home page -->
+      <ng-container *ngIf="homePage">
+        <a mat-button
+           *ngIf="!link.home && !link.action"
+           [ngx-scroll-to]="link.url"
+           [ngx-scroll-to-duration]="400"
+           [ngx-scroll-to-offset]="-50">
+          {{link.label}}
+        </a>
+      </ng-container>
+
+      <!-- nav links route to individual pages if not on home page -->
+      <ng-container *ngIf="!homePage">
+        <a *ngIf="!link.home && !link.action"mat-button
+           routerLink="{{link.url}}">
+          {{link.label}}
+        </a>
+      </ng-container>
+
     </li>
   </ul>
 </header>
