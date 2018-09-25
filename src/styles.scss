@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html {
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+
+  body {
+    margin: 0;
+    font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Cantarell, "Open Sans", sans-serif;
+    font-size: 14px;
+
+    a {
+      font-family: 'Ubuntu', sans-serif !important;
+      font-weight: 400 !important;
+      text-decoration: none;
+    }
+  }
+}
