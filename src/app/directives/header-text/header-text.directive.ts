@@ -28,7 +28,7 @@ export class HeaderTextDirective implements OnInit {
 
     switch(elementName) {
       case 'h1':
-        fontSize = '2rem';
+        fontSize = '2.25rem';
         break;
       case 'h2':
         fontSize = '2rem';
@@ -52,6 +52,10 @@ export class HeaderTextDirective implements OnInit {
     this.renderer.setStyle(this.headerElement, 'font-size', fontSize);
     this.renderer.setStyle(this.headerElement, 'text-align', 'center');
     this.renderer.setStyle(this.headerElement, 'color', 'rgb(32, 81, 91)');
+    this.renderer.setStyle(this.headerElement, 'margin-top', '50px');
+    this.renderer.setStyle(this.headerElement, 'margin-bottom', '15px');
+    this.renderer.setStyle(this.headerElement, 'font-weight', '700');
+    this.renderer.setStyle(this.headerElement, 'line-height', '1.1');
 
     if (this.capitalize) {
       this.headerElement.innerText = this.text.toLowerCase()

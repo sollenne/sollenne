@@ -27,8 +27,9 @@ import { HomeBlogComponent } from './pages/home/content/home-blog/home-blog.comp
 import { HomePortfolioComponent } from './pages/home/content/home-portfolio/home-portfolio.component';
 import { HomeHeroComponent } from './pages/home/content/home-hero/home-hero.component';
 
-// internal modules
+// modules
 import { MaterialModule } from './modules/material/material.module';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 // internal pipes
 import { ReverseOrderPipe } from './pipes/reverse-order.pipe';
@@ -61,6 +62,7 @@ import { HeaderTextDirective } from './directives/header-text/header-text.direct
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ScrollToModule.forRoot(),
   ],
   providers: [],
   schemas: [

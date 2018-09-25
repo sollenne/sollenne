@@ -1,5 +1,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
 
 html {
   -moz-osx-font-smoothing: antialiased;
@@ -15,5 +15,26 @@ html {
       font-weight: 400 !important;
       text-decoration: none;
     }
+
+    section {
+      min-height: 500px;
+      padding: 0;
+      position: relative;
+      z-index: 0;
+
+      &.section-gray {
+        background: #f6f8f8;
+        border-top: 1px solid #e0e5e6;
+        border-bottom: 1px solid #e0e5e6;
+      }
+
+      &.section-white {
+        background: #ffffff;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+      }
+    }
+
   }
+
 }

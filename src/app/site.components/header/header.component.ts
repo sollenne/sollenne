@@ -33,16 +33,16 @@ export class HeaderComponent implements OnInit {
         action: this.search(),
       },
       {
-        label: 'blog',
-        url: 'blog',
+        label: 'portfolio',
+        url: 'portfolio',
       },
       {
         label: 'services',
         url: 'services',
       },
       {
-        label: 'portfolio',
-        url: 'portfolio',
+        label: 'blog',
+        url: 'blog',
       },
       {
         label: 'contact',

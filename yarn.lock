@@ -281,6 +281,12 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@nicky-lenaers/ngx-scroll-to@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@nicky-lenaers/ngx-scroll-to/-/ngx-scroll-to-1.1.1.tgz#0ed2681c321b8f357c8e4f45300fec379ca82467"
+  dependencies:
+    tslib "^1.9.0"
+
 "@schematics/angular@0.8.3":
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.8.3.tgz#f4b661c5a196a06c050c0ae56809e6dbcfbf9f98"
