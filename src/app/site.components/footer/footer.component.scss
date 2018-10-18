@@ -3,8 +3,26 @@ footer {
   background: #f6f8f8;
   border-top: 1px solid #e0e5e6;
   border-bottom: 1px solid #e0e5e6;
+  position: relative;
+
+  .logo {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    background: url('../../../assets/images/sollenne.png') center center no-repeat;
+    min-height: 50px;
+    max-width: 200px;
+    position: absolute;
+    margin: 0 auto;
+    top: 10%;
+    right: 0;
+    left: 0;
+    bottom: 30%;
+    background-size: contain;
+  }
 
   small {
+    margin-top: 100px;
+    padding-bottom: 50px;
     display: block;
     text-align: center;
     color: rgba(119, 119, 119, 0.87);

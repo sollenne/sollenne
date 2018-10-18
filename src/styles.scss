@@ -22,6 +22,7 @@ html {
       padding: 0;
       position: relative;
       z-index: 0;
+      overflow: hidden;
 
       &.section-gray {
         background: #f6f8f8;

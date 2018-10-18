@@ -2,10 +2,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // app modules
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+//services
+import { ValidationService } from './services/validation/validation.service';
+import { ContactService } from './services/contact/contact.service';
 
 // page components
 import { HeaderComponent } from './site.components/header/header.component';
@@ -37,6 +43,8 @@ import { ReverseOrderPipe } from './pipes/reverse-order.pipe';
 // directives
 import { HeaderTextDirective } from './directives/header-text/header-text.directive';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,9 +70,15 @@ import { HeaderTextDirective } from './directives/header-text/header-text.direct
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
     ScrollToModule.forRoot(),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    ValidationService,
+    ContactService,
+  ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA,

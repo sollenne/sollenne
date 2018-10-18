@@ -1,0 +1,60 @@
+div.hero {
+  background: url('../../../../../assets/images/hero_bigfoot.jpg') top center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
+  filter: blur(3px);
+  margin: -15px;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba(0,0,0,0.5);
+  }
+}
+
+div.title {
+  background: url('../../../../../assets/images/sollenne.png') center center no-repeat;
+  min-height: 100px;
+  min-width: 300px;
+  position: absolute;
+  top: 10%;
+  right: 25%;
+  left: 25%;
+  bottom: 30%;
+  background-size: contain;
+
+  .soc-nets {
+    position: absolute;
+    right: 25%;
+    left: 25%;
+    bottom: -15%;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        width: 33.3%;
+        text-align: center;
+
+        a {
+          color: white;
+          font-size: 2.25rem;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

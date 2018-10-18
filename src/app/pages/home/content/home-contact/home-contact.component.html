@@ -2,5 +2,51 @@
   <a routerLink="contact">
     <h1 appHeaderText [text]="title"></h1>
   </a>
+
+  <form [formGroup]="contactForm">
+    <div id="errors">
+      <ul>
+        <li *ngFor="let err of formErrors">
+          {{err}}
+        </li>
+      </ul>
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput
+             type="text"
+             id="name"
+             name="name"
+             formControlName="name"
+             (blur)="onValueChanged()"
+             (keypress)="onValueChanged()">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput
+             type="text"
+             id="email"
+             name="email"
+             formControlName="email"
+             (blur)="onValueChanged()"
+             (keypress)="onValueChanged()">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea matInput
+                type="text"
+                id="message"
+                name="message"
+                formControlName="message"
+                (blur)="onValueChanged()"
+                (keypress)="onValueChanged()"></textarea>
+    </mat-form-field>
+
+    <button mat-stroked-button type="submit" (click)="onSubmit()">Submit</button>
+
+  </form>
 </div>
 

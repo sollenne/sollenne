@@ -29,7 +29,14 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "src/assets/jq/dynamics.min.js",
+              "src/assets/jq/jquery.duotone.min.js",
+              "src/assets/jq/kerning.min.js",
+              "src/assets/jq/okshadow.min.js",
+              "src/assets/jq/shadowbox.js"
+            ]
           },
           "configurations": {
             "production": {

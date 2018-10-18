@@ -22,7 +22,8 @@ const materialModules = [
   MatListModule,
   MatMenuModule,
   MatSelectModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatFormFieldModule,
 ];
 
 @NgModule({
